@@ -1,0 +1,51 @@
+[    
+    {
+        "id": 1, 
+        "name": "Covance",
+        "email": "Binagora@gmail.com",
+        "invited":"Jan 10, 2025",
+        "role": "CUSTOM",
+        "status": "Invited",
+        "items": [
+            {
+                "title": "Programs",
+                "create": true,
+                "edit": false,
+                "view": true,
+                "delete": true
+            },
+            {
+                "title": "Reports",
+                "create": true,
+                "edit": false,
+                "view": true,
+                "delete": true
+            }
+        ]
+    },
+
+    {
+        "id": 2, 
+        "name": "Kinetix",
+        "email": "kinetix@gmail.com",
+        "invited":"Jan 10, 2025",
+        "role": "CUSTOM",
+        "status": "Invited",
+        "items": [
+            {
+                "title": "Programs",
+                "create": true,
+                "edit": true,
+                "view": true,
+                "delete": false
+            },
+            {
+                "title": "Reports",
+                "create": false,
+                "edit": false,
+                "view": true,
+                "delete": true
+            }
+        ]
+    }
+]
