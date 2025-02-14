@@ -13,13 +13,6 @@
                 "edit": false,
                 "view": true,
                 "delete": true
-            },
-            {
-                "title": "Reports",
-                "create": true,
-                "edit": false,
-                "view": true,
-                "delete": true
             }
         ]
     },
