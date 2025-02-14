@@ -4,6 +4,7 @@ export interface EntityModel {
     id: number;
     name: string;
     email: string;
+    invited: string;
     role: string;
     status: string;
     items: item[];
