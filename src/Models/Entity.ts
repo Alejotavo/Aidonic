@@ -7,10 +7,10 @@ export interface EntityModel {
     invited: string;
     role: string;
     status: string;
-    items: item[];
+    items: Item[];
   }
   
-  export interface item {
+  export interface Item {
     title: string,
     create: boolean,
     edit: boolean,

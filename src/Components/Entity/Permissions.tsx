@@ -1,8 +1,8 @@
 
-import { item } from "./../../Models/Entity";
+import { Item } from "./../../Models/Entity";
 
 interface EntityProps {
-    dataItem: item;
+    dataItem: Item;
 }
 
 function Permissions({ dataItem }: EntityProps) {
