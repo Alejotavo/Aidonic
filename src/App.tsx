@@ -8,7 +8,13 @@ import Entity from './Components/Entity/Entity.js';
 function App() {
 
 
-  const [entities, setEntities] = useState<EntityModel[]>([])
+  const [entities, setEntities] = useState<EntityModel[]>([]);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
 
   useEffect( () => {
    setEntities(data);
@@ -18,12 +24,46 @@ function App() {
 
   return (
     <>
-    <h2 className="text-3xl font-medium text-gray-900 tracking-tight m-4">Entities List</h2>
-      {entities?.map((entity, index) => {
-        return (
-          <Entity key={index} data={entity} />
-        );
-      })}
+
+      <div className="flex h-screen">
+        
+        <aside
+        className={`absolute lg:relative inset-y-0 left-0 w-64 bg-blue-800 text-white transform transition-transform duration-300 z-40
+          ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}
+          >
+          <div className="p-4">
+            <h2 className="text-2xl font-bold">Menu</h2>
+            <button onClick={toggleSidebar} className='md:hidden'>CLOSE</button>
+          </div>
+          <nav className="mt-4">
+            <ul>
+              <li className="px-4 py-2 hover:bg-blue-700 cursor-pointer">Dashboard</li>
+              <li className="px-4 py-2 hover:bg-blue-700 cursor-pointer">Settings</li>
+              <li className="px-4 py-2 hover:bg-blue-700 cursor-pointer">Profile</li>
+              <li className="px-4 py-2 hover:bg-blue-700 cursor-pointer">Logout</li>
+            </ul>
+          </nav>
+        </aside>
+        <div className="flex flex-col flex-1">
+          <header className="bg-white shadow p-4">
+            <h1 className="text-xl font-semibold">Dashboard</h1>
+            <button   onClick={toggleSidebar} id="menu-toggle" className="block lg:hidden p-2 text-blue-800 border border-blue-800 rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </button>
+          </header>
+          <main className="flex-1 p-6">
+            <div id="react-wrapper">
+              {entities?.map((entity, index) => {
+                  return (
+                    <Entity key={index} data={entity} />
+                  );
+                })}
+            </div>
+          </main>
+        </div>
+      </div>
     </>
   )
 }
