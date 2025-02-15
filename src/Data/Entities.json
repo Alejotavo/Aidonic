@@ -2,8 +2,8 @@
     {
         "id": 1, 
         "name": "Covance",
-        "email": "Binagora@gmail.com",
-        "invited":"Jan 10, 2025",
+        "email": "covance@gmail.com",
+        "invited":"Jan 8, 2025",
         "role": "CUSTOM",
         "status": "Invited",
         "items": [
@@ -21,7 +21,7 @@
         "id": 2, 
         "name": "Kinetix",
         "email": "kinetix@gmail.com",
-        "invited":"Jan 10, 2025",
+        "invited":"Jan 11, 2025",
         "role": "CUSTOM",
         "status": "Invited",
         "items": [
@@ -34,6 +34,39 @@
             },
             {
                 "title": "Reports",
+                "create": false,
+                "edit": false,
+                "view": true,
+                "delete": true
+            }
+        ]
+    },
+
+    {
+        "id": 2, 
+        "name": "Dior Telerman",
+        "email": "diort@gmail.com",
+        "invited":"Jan 25, 2025",
+        "role": "CUSTOM",
+        "status": "Invited",
+        "items": [
+            {
+                "title": "Beneficiary List",
+                "create": true,
+                "edit": true,
+                "view": true,
+                "delete": false
+            },
+            {
+                "title": "Voucher Scanning",
+                "create": false,
+                "edit": false,
+                "view": true,
+                "delete": true
+            }
+            ,
+            {
+                "title": "User Management",
                 "create": false,
                 "edit": false,
                 "view": true,

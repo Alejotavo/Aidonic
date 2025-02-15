@@ -8,7 +8,7 @@ interface EntityProps {
 function Permissions({ dataItem }: EntityProps) {
     return (
         <div className="grid w-full grid-cols-5 gap-4 dark:bg-gray-100 p-3 mt-3">
-            <label className="text-gray-400 text-xs flex items-center justify-center">{dataItem.title}</label>
+            <label className="text-gray-500 flex items-center justify-center text-xs md:text-sm  font-bold">{dataItem.title}</label>
             <div className="flex flex-col items-center">
                     <label className="text-gray-400 text-xs">Create</label>
                     <span  className="text-gray-600 text-ms font-medium">
