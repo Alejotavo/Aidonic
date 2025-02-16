@@ -30,7 +30,7 @@ function Entity({ data }: EntityProps) {
             </div>
           </div>
         </div>
-        <div className="w-full py-3 text-center mt-3">
+        <div className="w-full text-center mt-3">
         {data.items?.map((item, index) => {
           return (
             <Permissions key={index} dataItem={item}  />
