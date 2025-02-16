@@ -9,7 +9,12 @@ interface EntityProps {
 function Entity({ data }: EntityProps) {
     return (
      <div className="m-3 text-white mx-auto max-w-full gap-x-4 bg-white p-3 sm:p-6 shadow-lg outline outline-black/5">
-        <div className="w-full mb-3 text-lg font-bold text-gray-900 "> {data.name}</div>
+        <div className="flex">
+          <div className="w-full mb-3 text-lg font-bold text-gray-900 "> {data.name}</div>
+          <button className="block p-2 cursor-pointer">
+            <img src="/more-horizontal-btn.svg"></img>
+          </button>
+        </div>
         <div className="grid w-full gap-4 grid-cols-1 sm:grid-cols-4">
           <div className="flex flex-col sm:col-span-1">
             <label className="text-gray-400 text-xs">Email</label>
