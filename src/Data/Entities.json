@@ -73,5 +73,56 @@
                 "delete": true
             }
         ]
+    },
+    {
+        "id": 4, 
+        "name": "Distintive Selection",
+        "email": "distintives@gmail.com",
+        "invited":"Jan 8, 2025",
+        "role": "Custom",
+        "status": "Invited",
+        "items": [
+            {
+                "title": "Programs",
+                "create": true,
+                "edit": true,
+                "view": false,
+                "delete": true
+            }
+        ]
+    },
+    {
+        "id": 5, 
+        "name": "Color Dixon",
+        "email": "ddixon@gmail.com",
+        "invited":"Jan 8, 2025",
+        "role": "Custom",
+        "status": "Invited",
+        "items": [
+            {
+                "title": "Programs",
+                "create": true,
+                "edit": false,
+                "view": false,
+                "delete": false
+            }
+        ]
+    },
+    {
+        "id": 6, 
+        "name": "Rowlings",
+        "email": "rowlings@gmail.com",
+        "invited":"Jan 8, 2025",
+        "role": "Custom",
+        "status": "Invited",
+        "items": [
+            {
+                "title": "Programs",
+                "create": false,
+                "edit": true,
+                "view": true,
+                "delete": true
+            }
+        ]
     }
 ]
