@@ -28,11 +28,14 @@ function App() {
       <div className="flex h-screen">
         
         <aside
-        className={`absolute lg:relative inset-y-0 left-0 w-full sm:w-64 bg-sky-950 text-white transform transition-transform duration-300 z-40
+          className={`absolute lg:relative inset-y-0 left-0 w-full sm:w-64 bg-sky-950 text-white transform transition-transform duration-300 z-40
           ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}
           >
           <div className="p-4 flex justify-between">
-            <h2 className="text-2xl font-bold">Menu</h2>
+              <img
+                  src= "/logo.svg"
+                  alt="logo"
+                />
             <button onClick={toggleSidebar} className='md:hidden'>
               <img
                   src= "/close.svg"
@@ -55,6 +58,7 @@ function App() {
               <img
                   src= "/logo.svg"
                   alt="logo"
+                  className='sm:hidden'
                 />
               <h1 className="text-xl font-semibold">Dashboard</h1>
             </div>
