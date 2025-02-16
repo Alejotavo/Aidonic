@@ -7,7 +7,6 @@ import Entity from './Components/Entity/Entity.js';
 
 function App() {
 
-
   const [entities, setEntities] = useState<EntityModel[]>([]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -15,12 +14,9 @@ function App() {
     setSidebarOpen(!sidebarOpen);
   };
 
-
   useEffect( () => {
    setEntities(data);
   }, []);
-
-  console.log(entities)
 
   return (
     <>
