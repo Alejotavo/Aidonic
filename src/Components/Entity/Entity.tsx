@@ -31,7 +31,12 @@ function Entity({ data }: EntityProps) {
             </div>
             <div className="flex flex-col">
               <label className="text-gray-400 text-xs">Status</label>
-              <span className="text-gray-600 text-ms font-medium">{data.status}</span>
+              <div className="flex">
+                <img src="/mail.svg" className="w-3"></img>
+                <span className="text-gray-600 text-ms font-medium ml-1">
+                  {data.status}
+                </span>
+              </div>
             </div>
           </div>
         </div>

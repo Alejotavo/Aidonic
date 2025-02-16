@@ -4,7 +4,7 @@
         "name": "Covance",
         "email": "covance@gmail.com",
         "invited":"Jan 8, 2025",
-        "role": "CUSTOM",
+        "role": "Custom",
         "status": "Invited",
         "items": [
             {
@@ -22,7 +22,7 @@
         "name": "Kinetix",
         "email": "kinetix@gmail.com",
         "invited":"Jan 11, 2025",
-        "role": "CUSTOM",
+        "role": "Custom",
         "status": "Invited",
         "items": [
             {
@@ -47,7 +47,7 @@
         "name": "Dior Telerman",
         "email": "diort@gmail.com",
         "invited":"Jan 25, 2025",
-        "role": "CUSTOM",
+        "role": "Custom",
         "status": "Invited",
         "items": [
             {
