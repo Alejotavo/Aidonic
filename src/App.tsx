@@ -26,7 +26,7 @@ function App() {
     <>
       <div className="flex">
         <aside
-          className={`absolute lg:relative inset-y-0 left-0 w-full sm:w-64 bg-sky-950 text-white transform transition-transform duration-300 z-40
+          className={`fixed lg:relative inset-y-0 left-0 w-full sm:w-64 bg-sky-950 text-white transform transition-transform duration-300 z-40
           ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}
           >
           <div className="p-4 flex justify-between">
