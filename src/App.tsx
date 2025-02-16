@@ -3,12 +3,14 @@ import './App.css'
 import { EntityModel } from './Models/Entity'
 import data from './../src/Data/Entities.json'
 import Entity from './Components/Entity/Entity.js';
+import Search from './Components/Search/Search.js';
 
 
 function App() {
 
   const [entities, setEntities] = useState<EntityModel[]>([]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -18,6 +20,11 @@ function App() {
    setEntities(data);
   }, []);
 
+  const filteredEntities = entities.filter((entity) =>
+    entity.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+
   return (
     <>
       <div className="flex">
@@ -26,10 +33,10 @@ function App() {
           ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}
           >
           <div className="p-4 flex justify-between">
-              <img
-                  src= "/logo.svg"
-                  alt="logo"
-                />
+            <img
+                src= "/logo.svg"
+                alt="logo"
+              />
             <button onClick={toggleSidebar} className='md:hidden'>
               <img
                   src= "/close.svg"
@@ -54,17 +61,20 @@ function App() {
                   alt="logo"
                   className='sm:hidden'
                 />
-              <h1 className="text-xl font-semibold">Dashboard</h1>
             </div>
-            <button   onClick={toggleSidebar} id="menu-toggle" className="cursor-pointer block lg:hidden p-2 text-blue-800 border border-blue-800 rounded">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="flex flex-1 justify-center">
+              <Search onSearch={(value) => setSearchTerm(value)} />
+            </div>
+            <button onClick={toggleSidebar} id="menu-toggle" className="cursor-pointer block lg:hidden p-2 text-blue-800 border border-blue-800 rounded">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
               </svg>
             </button>
           </header>
           <main className="flex-1 p-3 sm:p-6">
             <div id="react-wrapper">
-              {entities?.map((entity, index) => {
+            <h1 className="text-xl font-semibold py-2">Dashboard</h1>
+              {filteredEntities?.map((entity, index) => {
                   return (
                     <Entity key={index} data={entity} />
                   );
