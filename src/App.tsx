@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <div className="flex">
+      <div className="flex min-h-screen">
         <aside
           className={`fixed lg:relative inset-y-0 left-0 w-full sm:w-64 bg-sky-950 text-white transform transition-transform duration-300 z-40
           ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}
